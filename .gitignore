@@ -1,0 +1,23 @@
+# Dataset files and extracted image collections
+*.zip
+*.jpg
+*.jpeg
+*.png
+*.csv
+
+# Local audit outputs, model checkpoints, and generated reports
+sorghum_audit/
+near_duplicate_review/
+results*/
+outputs/
+work/
+*.pt
+*.pth
+
+# Python and local environment files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.streamlit/secrets.toml
