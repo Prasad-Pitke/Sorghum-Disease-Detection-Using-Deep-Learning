@@ -17,7 +17,7 @@ The archive has six folder labels: Anthracnose and Red Rot, Cereal Grain molds, 
 - `find_near_duplicates.py` — finds potential near-duplicate image pairs for review.
 - `app.py` — local Streamlit image upload interface.
 
-Dataset archives, image files, generated reports, review exports, and model checkpoints are intentionally excluded from Git. Download the dataset separately from [Mendeley Data](https://data.mendeley.com/datasets/fgb3cmfrg2/1).
+Dataset archives, image files, generated reports, review exports, and model checkpoints are excluded from Git. The trained checkpoint is available in the [v1.0.0 GitHub Release](https://github.com/Prasad-Pitke/Sorghum-Disease-Detection-Using-Deep-Learning/releases/download/v1.0.0/sorghum_cnn_best.pt). Download the dataset separately from [Mendeley Data](https://data.mendeley.com/datasets/fgb3cmfrg2/1).
 
 ## Setup
 
@@ -57,9 +57,13 @@ python train_sorghum.py `
 
 The checkpoint is written under `results_224_rust125`. Training on CPU can take a long time.
 
+## Download and use the trained model
+
+Download [sorghum_cnn_best.pt from the v1.0.0 release](https://github.com/Prasad-Pitke/Sorghum-Disease-Detection-Using-Deep-Learning/releases/download/v1.0.0/sorghum_cnn_best.pt) and save it as `results_224_rust125\sorghum_cnn_best.pt` in the project folder. You can then use the web interface without training the model again.
+
 ## Run the web interface
 
-After training the model with the output folder above:
+After downloading the checkpoint above or training it into the same output folder:
 
 ```powershell
 python -m streamlit run app.py
